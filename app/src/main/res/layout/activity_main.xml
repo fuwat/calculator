@@ -7,7 +7,6 @@
     tools:context=".MainActivity">
 
 
-
     <EditText
         android:id="@+id/secondNumberEditText"
         android:layout_width="wrap_content"
@@ -21,17 +20,32 @@
         app:layout_constraintStart_toStartOf="@+id/firstNumberEditText"
         app:layout_constraintTop_toBottomOf="@+id/firstNumberEditText" />
 
+    <Button
+        android:id="@+id/subtractButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="9dp"
+        android:onClick="calculate"
+        android:text="-"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/divideButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addButton"
+        app:layout_constraintTop_toBottomOf="@+id/secondNumberEditText" />
+
     <EditText
         android:id="@+id/firstNumberEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="40dp"
         android:layout_marginBottom="24dp"
         android:ems="10"
         android:hint="First number here"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/secondNumberEditText"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -50,18 +64,19 @@
         app:layout_constraintTop_toBottomOf="@+id/subtractButton" />
 
     <Button
-        android:id="@+id/subtractButton"
+        android:id="@+id/multiplyButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="101dp"
-        android:layout_marginBottom="9dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="18dp"
         android:onClick="calculate"
-        android:text="-"
+        android:text="*"
         android:textSize="48sp"
-        app:layout_constraintBottom_toTopOf="@+id/divideButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/addButton"
-        app:layout_constraintTop_toBottomOf="@+id/secondNumberEditText" />
+        app:layout_constraintBottom_toBottomOf="@+id/divideButton"
+        app:layout_constraintEnd_toStartOf="@+id/divideButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/divideButton"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/addButton"
@@ -75,21 +90,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/subtractButton"
         app:layout_constraintEnd_toStartOf="@+id/subtractButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/subtractButton" />
-
-    <Button
-        android:id="@+id/multiplyButton"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="18dp"
-        android:onClick="calculate"
-        android:text="*"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="@+id/divideButton"
-        app:layout_constraintEnd_toStartOf="@+id/divideButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/divideButton" />
+        app:layout_constraintTop_toTopOf="@+id/subtractButton"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/resultText"
@@ -100,7 +102,7 @@
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.415"
+        app:layout_constraintHorizontal_bias="0.408"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divideButton" />
 
